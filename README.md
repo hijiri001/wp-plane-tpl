@@ -10,5 +10,5 @@ https://ja.wordpress.org/
 https://roots.io/sage/  
 https://getbootstrap.com/  
 http://kenwheeler.github.io/slick/  
-https://fontawesome.com/
+https://fontawesome.com/  
 https://daneden.github.io/animate.css/
