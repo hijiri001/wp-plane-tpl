@@ -2,6 +2,9 @@
 import 'jquery';
 import 'bootstrap/dist/js/bootstrap';
 
+// Import Slick
+import 'slick-carousel/slick/slick.min';
+
 // import local dependencies
 import Router from './util/router';
 import common from './routes/Common';

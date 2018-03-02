@@ -55,3 +55,30 @@ array_walk($sage_includes, function ($file) {
         trigger_error(sprintf(__('Error locating %s for inclusion', 'sage'), $file), E_USER_ERROR);
     }
 });
+
+//youtube
+function iframe_in_div($the_content) {
+if ( is_singular() ) {
+$the_content = preg_replace('/<iframe/i', '<div class="youtube"><iframe', $the_content);
+$the_content = preg_replace('/<\/iframe>/i', '</iframe></div>', $the_content);
+}
+return $the_content;
+}
+add_filter('the_content','iframe_in_div');
+
+// jetpack ギャラリー横幅
+if ( ! isset( $content_width ) )
+$content_width = 1140;
+
+// jetpack コメント欄削除
+function tweakjp_rm_comments_att( $open, $post_id ) {
+    $post = get_post( $post_id );
+    if( $post->post_type == 'attachment' ) {
+        return false;
+    }
+    return $open;
+}
+add_filter( 'comments_open', 'tweakjp_rm_comments_att', 10 , 2 );
+
+// Register Custom Navigation Walker
+require_once('templates/bs4navwalker.php');

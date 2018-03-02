@@ -10,6 +10,10 @@ use Roots\Sage\Template;
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
+
+    if (is_page('checkout')) {
+        wp_enqueue_script('sage/checkout.js', asset_path('scripts/checkout.js'), ['jquery'], null, true);
+    }
 }, 100);
 
 /**
@@ -72,9 +76,9 @@ add_action('after_setup_theme', function () {
  */
 add_action('widgets_init', function () {
     $config = [
-        'before_widget' => '<section class="widget %1$s %2$s">',
+        'before_widget' => '<section class="widget %1$s %2$s mb-5">',
         'after_widget'  => '</section>',
-        'before_title'  => '<h3>',
+        'before_title'  => '<h3 class="h6">',
         'after_title'   => '</h3>'
     ];
     register_sidebar([
@@ -82,7 +86,48 @@ add_action('widgets_init', function () {
         'id'            => 'sidebar-primary'
     ] + $config);
     register_sidebar([
-        'name'          => __('Footer', 'sage'),
-        'id'            => 'sidebar-footer'
+        'name'          => __('Secondary', 'sage'),
+        'id'            => 'sidebar-secondary'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Tertiary', 'sage'),
+        'id'            => 'sidebar-thirdary'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Fourth', 'sage'),
+        'id'            => 'sidebar-fourth'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('First Footer', 'sage'),
+        'id'            => 'first-footer'
     ] + $config);
 });
+/**
+ * Register sidebars
+ */
+add_action('widgets_init', function () {
+    $config = [
+        'before_widget' => '<div class="card bg-white border-white mb-5"><div class="card-body"><section class="widget %1$s %2$s">',
+        'after_widget'  => '</section></div></div>',
+        'before_title'  => '<h3 class="h6">',
+        'after_title'   => '</h3>'
+    ];
+    register_sidebar([
+        'name'          => __('Second Footer', 'sage'),
+        'id'            => 'second-footer'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Third Footer', 'sage'),
+        'id'            => 'third-footer'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Fourth Footer', 'sage'),
+        'id'            => 'fourth-footer'
+    ] + $config);
+});
+//background
+add_custom_background();
+// ショートカット
+add_filter('widget_text', 'do_shortcode' );
+// ヘッダー
+add_custom_image_header('header_style', 'admin_header_style');

@@ -1,1 +1,2 @@
-<?php dynamic_sidebar('sidebar-primary'); ?>
+<?php dynamic_sidebar('first-footer'); ?>
+<?php dynamic_sidebar('second-footer'); ?>
