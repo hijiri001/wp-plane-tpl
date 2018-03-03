@@ -20,7 +20,7 @@
     "wordpress"
   ],
   "support": {
-    "issues": "https://github.com/roots/sage/issues",
+    "issues": "https://github.com/noboo/wp-plane-tpl/issues",
     "forum": "https://discourse.roots.io/"
   },
   "autoload": {
