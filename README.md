@@ -1,6 +1,6 @@
 # wp-plane-tpl
 ## wordpress、プレーンテーマ
-sage-9.0.0-alpha.4  
+Sage 9.0.0-beta.2 
 bootstrap v4.0  
 slick carousel  
 font awesome  
