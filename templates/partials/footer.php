@@ -16,20 +16,19 @@
         </div>
     </footer>
 </div>
-<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+
 <script>
     // --navbar fade--
-    $(document).ready(function() {
-        var $win = $(window),
-            $main = $('body'),
-            $nav = $('.navbar'),
+    jQuery(document).ready(function() {
+        var $win = jQuery(window),
+            $main = jQuery('body'),
+            $nav = jQuery('.navbar'),
             navHeight = $nav.outerHeight(),
             navPos = $nav.offset().top,
             fixedClass = 'is-fixed';
 
         $win.on('load scroll', function() {
-            var value = $(this).scrollTop();
+            var value = jQuery(this).scrollTop();
             if (value > navPos) {
                 $nav.addClass(fixedClass);
                 $main.css('margin-top', navHeight);
@@ -41,8 +40,6 @@
     });
 
 </script>
-
-
 
 <script>
     jQuery(function() {
