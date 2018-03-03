@@ -11,4 +11,7 @@ https://roots.io/sage/
 https://getbootstrap.com/  
 http://kenwheeler.github.io/slick/  
 https://fontawesome.com/  
-https://daneden.github.io/animate.css/
+https://daneden.github.io/animate.css/  
+
+### マニュアル
+https://github.com/noboo/wp-plane-tpl/blob/master/sage_manual.md
