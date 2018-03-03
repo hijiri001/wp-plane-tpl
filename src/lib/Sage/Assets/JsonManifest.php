@@ -10,32 +10,26 @@ namespace Roots\Sage\Assets;
 class JsonManifest implements ManifestInterface
 {
     /** @var array */
-    public $manifest;
-
-    /** @var string */
-    public $dist;
+    protected $manifest = [];
 
     /**
      * JsonManifest constructor
-     *
      * @param string $manifestPath Local filesystem path to JSON-encoded manifest
-     * @param string $distUri Remote URI to assets root
      */
-    public function __construct($manifestPath, $distUri)
+    public function __construct($manifestPath)
     {
         $this->manifest = file_exists($manifestPath) ? json_decode(file_get_contents($manifestPath), true) : [];
-        $this->dist = $distUri;
     }
 
     /** @inheritdoc */
-    public function get($asset)
+    public function get($file)
     {
-        return isset($this->manifest[$asset]) ? $this->manifest[$asset] : $asset;
+        return isset($this->manifest[$file]) ? $this->manifest[$file] : $file;
     }
 
     /** @inheritdoc */
-    public function getUri($asset)
+    public function getAll()
     {
-        return "{$this->dist}/{$this->get($asset)}";
+        return $this->manifest;
     }
 }

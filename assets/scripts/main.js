@@ -1,25 +1,26 @@
-/** import external dependencies */
+// import external dependencies
 import 'jquery';
-import 'bootstrap';
+import 'bootstrap/dist/js/bootstrap';
 
-/** import local dependencies */
-import Router from './util/Router';
-import common from './routes/common';
-import home from './routes/home';
-import aboutUs from './routes/about';
+// Import Slick
+import 'slick-carousel/slick/slick.min';
 
-/**
- * Populate Router instance with DOM routes
- * @type {Router} routes - An instance of our router
- */
-const routes = new Router({
-  /** All pages */
+// import local dependencies
+import Router from './util/router';
+import common from './routes/Common';
+import home from './routes/Home';
+import aboutUs from './routes/About';
+
+// Use this variable to set up the common and page specific functions. If you
+// rename this variable, you will also need to rename the namespace below.
+const routes = {
+  // All pages
   common,
-  /** Home page */
+  // Home page
   home,
-  /** About Us page, note the change from about-us to aboutUs. */
+  // About us page, note the change from about-us to aboutUs.
   aboutUs,
-});
+};
 
-/** Load Events */
-jQuery(document).ready(() => routes.loadEvents());
+// Load Events
+jQuery(document).ready(() => new Router(routes).loadEvents());
