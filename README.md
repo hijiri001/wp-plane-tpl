@@ -18,6 +18,7 @@ https://daneden.github.io/animate.css/
 ``$ yarn add bootstrap -v 4.0.0``  
 ``$ yarn add slick-carousel``  
 ``$ yarn add animate-sass --dev``  
+``$ yarn add popper.js``
 
 ### ビルド
 ``$ yarn run start`` — Compile assets when file changes are made, start Browsersync session  
