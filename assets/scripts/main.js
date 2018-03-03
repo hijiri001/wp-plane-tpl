@@ -1,6 +1,6 @@
 // import external dependencies
 import 'jquery';
-import 'bootstrap/dist/js/bootstrap';
+import 'bootstrap/dist/js/bootstrap.bundle';
 
 // Import Slick
 import 'slick-carousel/slick/slick.min';
