@@ -14,4 +14,4 @@ https://fontawesome.com/
 https://daneden.github.io/animate.css/  
 
 ### マニュアル
-https://github.com/noboo/wp-plane-tpl/blob/master/sage_manual.md
+``$ composer create-project roots/sage your-theme-name 9.0.0-alpha.4``
