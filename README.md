@@ -15,7 +15,8 @@ https://daneden.github.io/animate.css/
 
 ### インストール
 ``$ composer create-project roots/sage your-theme-name 9.0.0-alpha.4``   
-``$ yarn add bootstrap -v 4.0.0``
+``$ yarn add bootstrap -v 4.0.0``  
+``$ yarn add slick-carousel``  
 
 ### ビルド
 ``$ yarn run start`` — Compile assets when file changes are made, start Browsersync session  
