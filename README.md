@@ -1,5 +1,6 @@
 # wp-plane-tpl
 Roots -Sage 9.0.0-alpha.4にbootstrap4でデザインしたヤーツ。
+上書き用。
 
 ## wordpress、プレーンテーマ
 Sage 9.0.0-alpha.4  
